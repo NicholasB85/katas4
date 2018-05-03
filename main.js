@@ -216,7 +216,7 @@ function doubles() {
             if (city.includes(doubledVowelPair)) {
                 citiesWithDoubles.push(city)
                 continue
-                sdkj
+                
             }
         }
     }
@@ -240,7 +240,28 @@ function doubles() {
 }
 
 function includeOr() {
-    
+    const cities = lotrCitiesArray.splice(",");
+
+    const citiesWithDoubles = []
+    const doubledVowels = ["or"]
+
+    for (let city of cities) {
+        for (let doubledVowelPair of doubledVowels) {
+            if (city.includes(doubledVowelPair)) {
+                citiesWithDoubles.push(city)
+                continue
+                
+            }
+        }
+    }
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(JSON.stringify(citiesWithDoubles));
+    let destination = document.getElementById("twenty");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return citiesWithDoubles;
+
 }
 
 displayCitiesCSV()
@@ -262,3 +283,4 @@ repeatOf14()
 ofOnly()
 lastWord()
 doubles()
+includeOr()
