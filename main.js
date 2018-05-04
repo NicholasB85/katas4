@@ -38,7 +38,7 @@ function semiColon(){
 }
 
 function commaSeperate(){
-    const seperate = lotrCitiesArray.toString(",");
+    let seperate = lotrCitiesArray.toString(",");
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(seperate);
     let destination = document.getElementById("four");
@@ -49,7 +49,7 @@ function commaSeperate(){
 }
 
 function firstFive(){
-    const first = lotrCitiesArray.slice(0,5);
+    let first = lotrCitiesArray.slice(0,5);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(first);
     let destination = document.getElementById("five");
@@ -60,7 +60,7 @@ function firstFive(){
 }
 
 function lastFive(){
-    const last = lotrCitiesArray.slice(3,9);
+    let last = lotrCitiesArray.slice(3,9);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(last);
     let destination = document.getElementById("six");
@@ -71,7 +71,7 @@ function lastFive(){
 }
 
 function threeToFive(){
-    const middle = lotrCitiesArray.slice(2,5);
+    let middle = lotrCitiesArray.slice(2,5);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(middle);
     let destination = document.getElementById("seven");
@@ -82,7 +82,7 @@ function threeToFive(){
 }
 
 function rohan(){
-    const rmRohan = lotrCitiesArray.splice(2,1);
+    let rmRohan = lotrCitiesArray.splice(2,1);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lotrCitiesArray);
     let destiantion = document.getElementById("eight");
@@ -93,7 +93,7 @@ function rohan(){
 }
 
 function deadMarsh (){
-    rmAfter = lotrCitiesArray.splice(5,2);
+    let rmAfter = lotrCitiesArray.splice(5,2);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lotrCitiesArray);
     let destiantion = document.getElementById("nine");
@@ -240,28 +240,61 @@ function doubles() {
 }
 
 function includeOr() {
-    const cities = lotrCitiesArray.splice(",");
-
-    const citiesWithDoubles = []
-    const doubledVowels = "or"
+    
+    let cities = lotrCitiesArray;
+    cities = cities.splice (",");
+    const citiesWithOr = []
+    const or = "or"
 
     for (let city of cities) {
         // for (let doubledVowelPair of doubledVowels) {
-            if (city.includes(doubledVowels)) {
-                citiesWithDoubles.push(city)
-                continue
-                
-            
+            if (city.includes(or)) {
+                citiesWithOr.push(city)
+                continue         
         }
     }
     let elementOne = document.createElement("p");
-    let textOne = document.createTextNode(JSON.stringify(citiesWithDoubles));
+    let textOne = document.createTextNode(JSON.stringify(citiesWithOr));
     let destination = document.getElementById("twenty");
     elementOne.appendChild(textOne);
     destination.appendChild(elementOne);
 
-    return citiesWithDoubles;
+    return citiesWithOr;
+    
+}
 
+function startsWithB(){
+    let words = bestThing.match(/(\bb\S*)/gi);
+
+    // const wordsB = []
+    // const b = "b"
+
+    // for (let word of wordB) {
+    //     if (word.includes(b)) {
+    //         wordsB.push(word)
+    //         continue
+    //     }
+    // }
+
+
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(words);
+    let destination = document.getElementById("twentyOne");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return words;
+}
+
+function includesOne(){
+    
+ let hasMirkwood = lotrCitiesArray.join(",").includes("Mirkwood");
+ 
+ let elementOne = document.createElement("p");
+ let textOne = document.createTextNode(hasMirkwood);
+ let destination = document.getElementById("twentyTwo");
+
+ return hasMirkwood;
 }
 
 displayCitiesCSV()
@@ -284,3 +317,8 @@ ofOnly()
 lastWord()
 doubles()
 includeOr()
+startsWithB()
+includesOne()
+
+
+
