@@ -243,15 +243,15 @@ function includeOr() {
     const cities = lotrCitiesArray.splice(",");
 
     const citiesWithDoubles = []
-    const doubledVowels = ["or"]
+    const doubledVowels = "or"
 
     for (let city of cities) {
-        for (let doubledVowelPair of doubledVowels) {
-            if (city.includes(doubledVowelPair)) {
+        // for (let doubledVowelPair of doubledVowels) {
+            if (city.includes(doubledVowels)) {
                 citiesWithDoubles.push(city)
                 continue
                 
-            }
+            
         }
     }
     let elementOne = document.createElement("p");
