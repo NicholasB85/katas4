@@ -94,6 +94,7 @@ function rohan(){
 
 function deadMarsh (){
     let rmAfter = lotrCitiesArray.splice(5,2);
+    
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lotrCitiesArray);
     let destiantion = document.getElementById("nine");
@@ -105,6 +106,7 @@ function deadMarsh (){
 
 function addRohon(){
     let addback = lotrCitiesArray.splice(2,0,"Rohan");
+    
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lotrCitiesArray);
     let destination = document.getElementById("ten");
@@ -240,9 +242,8 @@ function doubles() {
 }
 
 function includeOr() {
-    
-    let cities = lotrCitiesArray;
-    cities = cities.splice (",");
+      
+    let cities = lotrCitiesArray.join(",")
     const citiesWithOr = []
     const or = "or"
 
@@ -257,8 +258,7 @@ function includeOr() {
     let textOne = document.createTextNode(JSON.stringify(citiesWithOr));
     let destination = document.getElementById("twenty");
     elementOne.appendChild(textOne);
-    destination.appendChild(elementOne);
-
+    destination.appendChild(elementOne);  
     return citiesWithOr;
     
 }
@@ -285,16 +285,146 @@ function startsWithB(){
 
     return words;
 }
-
+//console.log(lotrCitiesArray)
 function includesOne(){
     
- let hasMirkwood = lotrCitiesArray.join(",").includes("Mirkwood");
- 
+ let hasMirkwood = lotrCitiesArray.includes("Mirkwood");
+
  let elementOne = document.createElement("p");
- let textOne = document.createTextNode(hasMirkwood);
+ let textOne = document.createTextNode(hasMirkwood? "Yes":"No");
  let destination = document.getElementById("twentyTwo");
+ elementOne.appendChild(textOne)
+ destination.appendChild(elementOne)
 
  return hasMirkwood;
+}
+
+function includesTwo(){
+
+    let hasHollywood = lotrCitiesArray.includes("Hollywood");
+
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(hasHollywood? "Yes":"No");
+    let destination = document.getElementById("twentyThree");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return hasHollywood;
+}
+
+function displayIn(){
+      let index = lotrCitiesArray.indexOf("Mirkwood");
+
+      let elementOne = document.createElement("p");
+      let textOne =document.createTextNode(index);
+      let destination = document.getElementById("twentyFour");
+      elementOne.appendChild(textOne);
+      destination.appendChild(elementOne);
+
+      return index;
+}
+
+function firstCity(){
+  let moreThanOne =[];
+
+  lotrCitiesArray.forEach(arrayElement => {
+      if (arrayElement.includes(" ")){
+        moreThanOne.push(arrayElement);
+      }
+  });
+
+  let elementOne = document.createElement("p");
+  let textOne = document.createTextNode(moreThanOne);
+  let destination = document.getElementById("twentyFive");
+  elementOne.appendChild(textOne);
+  destination.appendChild(elementOne);
+
+  return moreThanOne;
+}
+   
+function reverse(){
+    let backwards = lotrCitiesArray.reverse();
+
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(backwards);
+    let destination = document.getElementById("twentySix");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return backwards;
+}
+
+function alphabet(){
+    alphaSort = lotrCitiesArray.sort();
+
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(alphaSort);
+    let destination = document.getElementById("twentySeven");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return alphaSort;
+}
+
+function sortTwo(){
+    let bySize = lotrCitiesArray.sort(function(a, b) {
+        return a.length - b.length || a.localeCompare;
+    });
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(bySize);
+    let destination = document.getElementById("twentyEight");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return bySize;
+}
+
+function popper(){
+    let popOut = lotrCitiesArray.pop();
+
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(lotrCitiesArray);
+    let destination = document.getElementById("twentyNine");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return popOut;
+}
+
+function push(){
+    let pushIt = lotrCitiesArray.push("Deadest Marshes");
+
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(lotrCitiesArray);
+    let destination = document.getElementById("thirty");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return pushIt;
+}
+
+function shiftIt(){
+    shifter = lotrCitiesArray.shift();
+
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(lotrCitiesArray);
+    let destination = document.getElementById("thirtyOne");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return shifter;
+}
+
+function redo(){
+    undo = lotrCitiesArray.unshift("Rohan");
+
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(lotrCitiesArray);
+    let destination = document.getElementById("thirtyTwo");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
+
+    return undo;
 }
 
 displayCitiesCSV()
@@ -319,6 +449,16 @@ doubles()
 includeOr()
 startsWithB()
 includesOne()
+includesTwo()
+displayIn()
+firstCity()
+reverse()
+alphabet()
+sortTwo()
+popper()
+push()
+shiftIt()
+redo()
 
 
-
+ 
