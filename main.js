@@ -1,5 +1,5 @@
 const gotCitiesCSV = "King's Landing,Braavos,Volantis,Old Valyria,Free Cities,Qarth,Meereen";
-const lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
+const lotrCitiesArray = ["Mordor", "Gondor", "Rohan", "Beleriand", "Mirkwood", "Dead Marshes", "Rhun", "Harad"];
 const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit"
 
 
@@ -11,22 +11,22 @@ function displayCitiesCSV() {
     elementOne.appendChild(textOne);
     destination.appendChild(elementOne);
 
-   return cityArray;
+    return cityArray;
 }
 
-function bestArray(){
-const bestSentence = JSON.stringify(bestThing.split(" , "));
-let elementOne = document.createElement("p");
-let textOne = document.createTextNode(bestSentence);
-let destination = document.getElementById("two");
-elementOne.appendChild(textOne);
-destination.appendChild(elementOne);
+function bestArray() {
+    const bestSentence = JSON.stringify(bestThing.split(" , "));
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(bestSentence);
+    let destination = document.getElementById("two");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
 
-return bestSentence;
+    return bestSentence;
 
 }
 
-function semiColon(){
+function semiColon() {
     const citySemi = gotCitiesCSV.split(",").join(";");
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(citySemi);
@@ -34,10 +34,10 @@ function semiColon(){
     elementOne.appendChild(textOne);
     destination.appendChild(elementOne);
 
-   return citySemi;
+    return citySemi;
 }
 
-function commaSeperate(){
+function commaSeperate() {
     let seperate = lotrCitiesArray.toString(",");
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(seperate);
@@ -45,22 +45,22 @@ function commaSeperate(){
     elementOne.appendChild(textOne);
     destination.appendChild(elementOne);
 
-    return seperate; 
+    return seperate;
 }
 
-function firstFive(){
-    let first = lotrCitiesArray.slice(0,5);
+function firstFive() {
+    let first = lotrCitiesArray.slice(0, 5);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(first);
     let destination = document.getElementById("five");
     elementOne.appendChild(textOne);
     destination.appendChild(elementOne);
-    
+
     return first;
 }
 
-function lastFive(){
-    let last = lotrCitiesArray.slice(3,9);
+function lastFive() {
+    let last = lotrCitiesArray.slice(3, 9);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(last);
     let destination = document.getElementById("six");
@@ -70,8 +70,8 @@ function lastFive(){
     return last;
 }
 
-function threeToFive(){
-    let middle = lotrCitiesArray.slice(2,5);
+function threeToFive() {
+    let middle = lotrCitiesArray.slice(2, 5);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(middle);
     let destination = document.getElementById("seven");
@@ -81,8 +81,8 @@ function threeToFive(){
     return middle;
 }
 
-function rohan(){
-    let rmRohan = lotrCitiesArray.splice(2,1);
+function rohan() {
+    let rmRohan = lotrCitiesArray.splice(2, 1);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lotrCitiesArray);
     let destiantion = document.getElementById("eight");
@@ -92,9 +92,9 @@ function rohan(){
     return rmRohan;
 }
 
-function deadMarsh (){
-    let rmAfter = lotrCitiesArray.splice(5,2);
-    
+function deadMarsh() {
+    let rmAfter = lotrCitiesArray.splice(5, 2);
+
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lotrCitiesArray);
     let destiantion = document.getElementById("nine");
@@ -104,9 +104,9 @@ function deadMarsh (){
     return rmAfter;
 }
 
-function addRohon(){
-    let addback = lotrCitiesArray.splice(2,0,"Rohan");
-    
+function addRohon() {
+    let addback = lotrCitiesArray.splice(2, 0, "Rohan");
+
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lotrCitiesArray);
     let destination = document.getElementById("ten");
@@ -116,8 +116,8 @@ function addRohon(){
     return addback;
 }
 
-function renameDead(){
-    let deadest = lotrCitiesArray.splice(5,1,"Deadest Marshes");
+function renameDead() {
+    let deadest = lotrCitiesArray.splice(5, 1, "Deadest Marshes");
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lotrCitiesArray);
     let destination = document.getElementById("eleven");
@@ -128,7 +128,7 @@ function renameDead(){
 }
 
 function firstFourteen() {
-    let fourteen = bestThing.slice(0,14);
+    let fourteen = bestThing.slice(0, 14);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(fourteen);
     let destination = document.getElementById("twelve");
@@ -152,8 +152,8 @@ function lastTwelve() {
 
 }
 
-function inBetween(){
-    let between = bestThing.slice(23,38);
+function inBetween() {
+    let between = bestThing.slice(23, 38);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(between);
     let destination = document.getElementById("fourteen");
@@ -163,7 +163,7 @@ function inBetween(){
     return between;
 }
 
-function sub13(){
+function sub13() {
     let substring = bestThing.substring(bestThing.length - 12);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(substring);
@@ -174,8 +174,8 @@ function sub13(){
     return substring;
 }
 
-function repeatOf14(){
-    let middle = bestThing.substring(23,38);
+function repeatOf14() {
+    let middle = bestThing.substring(23, 38);
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(middle);
     let destination = document.getElementById("sixteen");
@@ -185,7 +185,7 @@ function repeatOf14(){
     return middle;
 }
 
-function ofOnly(){
+function ofOnly() {
     let result = bestThing.indexOf("only");
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(result);
@@ -196,8 +196,8 @@ function ofOnly(){
     return result;
 }
 
-function lastWord(){
-    let lastbit = bestThing.lastIndexOf(" ")+ 1;
+function lastWord() {
+    let lastbit = bestThing.lastIndexOf(" ") + 1;
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(lastbit);
     let destination = document.getElementById("eighteen");
@@ -205,8 +205,9 @@ function lastWord(){
     destination.appendChild(elementOne);
 
     return lastbit;
-    
+
 }
+
 function doubles() {
     const cities = gotCitiesCSV.split(",");
 
@@ -218,7 +219,7 @@ function doubles() {
             if (city.includes(doubledVowelPair)) {
                 citiesWithDoubles.push(city)
                 continue
-                
+
             }
         }
     }
@@ -242,28 +243,28 @@ function doubles() {
 }
 
 function includeOr() {
-      
+
     let cities = lotrCitiesArray.join(",")
     const citiesWithOr = []
     const or = "or"
 
     for (let city of cities) {
         // for (let doubledVowelPair of doubledVowels) {
-            if (city.includes(or)) {
-                citiesWithOr.push(city)
-                continue         
+        if (city.includes(or)) {
+            citiesWithOr.push(city)
+            continue
         }
     }
     let elementOne = document.createElement("p");
     let textOne = document.createTextNode(JSON.stringify(citiesWithOr));
     let destination = document.getElementById("twenty");
     elementOne.appendChild(textOne);
-    destination.appendChild(elementOne);  
+    destination.appendChild(elementOne);
     return citiesWithOr;
-    
+
 }
 
-function startsWithB(){
+function startsWithB() {
     let words = bestThing.match(/(\bb\S*)/gi);
 
     // const wordsB = []
@@ -286,25 +287,25 @@ function startsWithB(){
     return words;
 }
 //console.log(lotrCitiesArray)
-function includesOne(){
-    
- let hasMirkwood = lotrCitiesArray.includes("Mirkwood");
+function includesOne() {
 
- let elementOne = document.createElement("p");
- let textOne = document.createTextNode(hasMirkwood? "Yes":"No");
- let destination = document.getElementById("twentyTwo");
- elementOne.appendChild(textOne)
- destination.appendChild(elementOne)
+    let hasMirkwood = lotrCitiesArray.includes("Mirkwood");
 
- return hasMirkwood;
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(hasMirkwood ? "Yes" : "No");
+    let destination = document.getElementById("twentyTwo");
+    elementOne.appendChild(textOne)
+    destination.appendChild(elementOne)
+
+    return hasMirkwood;
 }
 
-function includesTwo(){
+function includesTwo() {
 
     let hasHollywood = lotrCitiesArray.includes("Hollywood");
 
     let elementOne = document.createElement("p");
-    let textOne = document.createTextNode(hasHollywood? "Yes":"No");
+    let textOne = document.createTextNode(hasHollywood ? "Yes" : "No");
     let destination = document.getElementById("twentyThree");
     elementOne.appendChild(textOne);
     destination.appendChild(elementOne);
@@ -312,37 +313,37 @@ function includesTwo(){
     return hasHollywood;
 }
 
-function displayIn(){
-      let index = lotrCitiesArray.indexOf("Mirkwood");
+function displayIn() {
+    let index = lotrCitiesArray.indexOf("Mirkwood");
 
-      let elementOne = document.createElement("p");
-      let textOne =document.createTextNode(index);
-      let destination = document.getElementById("twentyFour");
-      elementOne.appendChild(textOne);
-      destination.appendChild(elementOne);
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(index);
+    let destination = document.getElementById("twentyFour");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
 
-      return index;
+    return index;
 }
 
-function firstCity(){
-  let moreThanOne =[];
+function firstCity() {
+    let moreThanOne = [];
 
-  lotrCitiesArray.forEach(arrayElement => {
-      if (arrayElement.includes(" ")){
-        moreThanOne.push(arrayElement);
-      }
-  });
+    lotrCitiesArray.forEach(arrayElement => {
+        if (arrayElement.includes(" ")) {
+            moreThanOne.push(arrayElement);
+        }
+    });
 
-  let elementOne = document.createElement("p");
-  let textOne = document.createTextNode(moreThanOne);
-  let destination = document.getElementById("twentyFive");
-  elementOne.appendChild(textOne);
-  destination.appendChild(elementOne);
+    let elementOne = document.createElement("p");
+    let textOne = document.createTextNode(moreThanOne);
+    let destination = document.getElementById("twentyFive");
+    elementOne.appendChild(textOne);
+    destination.appendChild(elementOne);
 
-  return moreThanOne;
+    return moreThanOne;
 }
-   
-function reverse(){
+
+function reverse() {
     let backwards = lotrCitiesArray.reverse();
 
     let elementOne = document.createElement("p");
@@ -354,7 +355,7 @@ function reverse(){
     return backwards;
 }
 
-function alphabet(){
+function alphabet() {
     alphaSort = lotrCitiesArray.sort();
 
     let elementOne = document.createElement("p");
@@ -366,8 +367,8 @@ function alphabet(){
     return alphaSort;
 }
 
-function sortTwo(){
-    let bySize = lotrCitiesArray.sort(function(a, b) {
+function sortTwo() {
+    let bySize = lotrCitiesArray.sort(function (a, b) {
         return a.length - b.length || a.localeCompare;
     });
     let elementOne = document.createElement("p");
@@ -379,7 +380,7 @@ function sortTwo(){
     return bySize;
 }
 
-function popper(){
+function popper() {
     let popOut = lotrCitiesArray.pop();
 
     let elementOne = document.createElement("p");
@@ -391,7 +392,7 @@ function popper(){
     return popOut;
 }
 
-function push(){
+function push() {
     let pushIt = lotrCitiesArray.push("Deadest Marshes");
 
     let elementOne = document.createElement("p");
@@ -403,7 +404,7 @@ function push(){
     return pushIt;
 }
 
-function shiftIt(){
+function shiftIt() {
     shifter = lotrCitiesArray.shift();
 
     let elementOne = document.createElement("p");
@@ -415,7 +416,7 @@ function shiftIt(){
     return shifter;
 }
 
-function redo(){
+function redo() {
     undo = lotrCitiesArray.unshift("Rohan");
 
     let elementOne = document.createElement("p");
@@ -459,6 +460,3 @@ popper()
 push()
 shiftIt()
 redo()
-
-
- 
